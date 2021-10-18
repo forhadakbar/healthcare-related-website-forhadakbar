@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import APIContextProvider from './Context/apiContext';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import Pricing from './Pages/Pricing/Pricing';
 import SeeDetails from './Pages/SeeDetails/SeeDetails';
@@ -29,6 +30,10 @@ function App() {
 
             <Route path="/services/:serviceId">
               <SeeDetails></SeeDetails>
+            </Route>
+
+            <Route path="/login">
+              <Login></Login>
             </Route>
 
             <Route path="/*">

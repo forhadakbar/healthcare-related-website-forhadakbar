@@ -1,6 +1,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import intializeAuthentication from "../Firebase/firebase.init";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 
 const APIContext = createContext();
+
+intializeAuthentication();
 
 const APIContextProvider = ({ children }) => {
 
@@ -21,11 +25,39 @@ const APIContextProvider = ({ children }) => {
     }, [])
 
 
+    //firebase authentication
+
+    const [user, setUser] = useState({})
+
+    const googleProvider = new GoogleAuthProvider();
+    const auth = getAuth();
+
+    const signInUsingGoogle = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                setUser(result.user)
+            })
+    }
+
+
+    const logOut = () => {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            setUser({})
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
+
+
     return (
         <APIContext.Provider
             value={{
                 services,
-                isLoading
+                isLoading,
+                signInUsingGoogle,
+                user,
+                logOut
             }}
         >
             {children}

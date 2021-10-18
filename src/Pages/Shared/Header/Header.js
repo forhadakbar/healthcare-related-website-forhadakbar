@@ -2,8 +2,10 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useAPI } from '../../../Context/apiContext';
 
 const Header = () => {
+    const { user, logOut } = useAPI();
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
@@ -13,15 +15,30 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                            <Nav.Link as={HashLink} to="/#services">Services</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
                             <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
                         </Nav>
-                        <Nav>
-                            <Nav.Link href="#deets">Sign In</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Sign in as:
-                            </Nav.Link>
-                        </Nav>
+
+
+                        {
+                            user.email ?
+
+                                <Nav>
+                                    <button onClick={logOut}>Sign Out</button>
+                                    <Nav.Link eventKey={2} href="#memes">
+                                        Sign in as: {user.displayName}
+                                    </Nav.Link>
+                                </Nav>
+
+                                :
+
+                                <Nav>
+                                    <Nav.Link as={Link} to="/login">Sign In</Nav.Link>
+
+                                </Nav>
+
+                        }
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
