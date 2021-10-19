@@ -8,7 +8,6 @@ const PrivateRoute = ({ children, ...rest }) => {
 
     // Adding spinner while authenticating
     if (isLoading) {
-        console.log(isLoading);
         return <Spinner animation="border" variant="danger" />
     }
 

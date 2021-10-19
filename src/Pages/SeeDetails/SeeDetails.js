@@ -5,10 +5,10 @@ import { useAPI } from '../../Context/apiContext';
 const SeeDetails = () => {
 
     const { serviceId } = useParams();
-    const { services } = useAPI();
+    const { fakeData } = useAPI();
     const { isLoadingData } = useAPI();
 
-    const filterData = services.filter(service => service.id === serviceId)
+    const filterData = fakeData.filter(service => service.id === serviceId)
 
 
     return (
@@ -20,12 +20,13 @@ const SeeDetails = () => {
 
 
                     <div className="d-flex justify-content-center mt-5">
-                        <div class="card" style={{ width: '18rem' }}>
-                            <img src={filterData[0].img} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">{filterData[0].title}</h5>
-                                <p class="card-text">{filterData[0].detail}</p>
-                                <button href="#" class="btn btn-primary">Enroll to this Plan</button>
+                        <div className="card" style={{ width: '18rem' }}>
+                            <img src={filterData[0].img} className="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className="card-title">{filterData[0].title}</h5>
+                                <p className="card-text">{filterData[0].detail}</p>
+                                <p className="fw-bold">Cost: ${filterData[0].cost}/ month</p>
+                                <a href="/home" className="btn btn-primary">Enroll to this Plan</a>
                             </div>
                         </div>
 

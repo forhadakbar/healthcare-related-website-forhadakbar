@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import intializeAuthentication from "../Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const APIContext = createContext();
 
@@ -9,17 +9,17 @@ intializeAuthentication();
 const APIContextProvider = ({ children }) => {
 
     //data
-    const [services, setServices] = useState([]);
+    const [fakeData, setFakeData] = useState([]);
     const [isLoadingData, setIsLoadingData] = useState(true);
 
 
     // fetch data
 
     useEffect(() => {
-        fetch("/services.json")
+        fetch("/data.json")
             .then(res => res.json())
             .then(data => {
-                setServices(data)
+                setFakeData(data)
                 setIsLoadingData(false)
             })
     }, [])
@@ -28,8 +28,10 @@ const APIContextProvider = ({ children }) => {
     //firebase authentication
 
     const [user, setUser] = useState({})
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -37,11 +39,34 @@ const APIContextProvider = ({ children }) => {
     // Google Sign in
     const signInUsingGoogle = () => {
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
             .finally(() => setIsLoading(false));
+
+    }
+
+    // Signin Using email and password
+
+
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+
+    const handlePasswordChange = e => {
+        setPassword(e.target.value);
+    }
+
+    const registrationUsingEmail = e => {
+        setIsLoading(true);
+        return createUserWithEmailAndPassword(auth, email, password)
+            .finally(() => setIsLoading(false));
+
+    }
+
+    const signUsingEmail = e => {
+        setIsLoading(true);
+        return signInWithEmailAndPassword(auth, email, password)
+            .finally(() => setIsLoading(false));
+
     }
 
     // observe user state change
@@ -71,12 +96,19 @@ const APIContextProvider = ({ children }) => {
     return (
         <APIContext.Provider
             value={{
-                services,
+                fakeData,
                 isLoadingData,
                 isLoading,
+                registrationUsingEmail,
+                signUsingEmail,
+                handleEmailChange,
+                handlePasswordChange,
+                email,
+                password,
                 signInUsingGoogle,
                 user,
-                logOut
+                logOut,
+                error
             }}
         >
             {children}

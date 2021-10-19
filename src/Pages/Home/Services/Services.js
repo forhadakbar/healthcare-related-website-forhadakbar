@@ -5,7 +5,7 @@ import Service from '../Service/Service';
 
 const Services = () => {
 
-    const { services } = useAPI();
+    const { fakeData } = useAPI();
 
     return (
         <div id="services" className="p-3">
@@ -15,7 +15,7 @@ const Services = () => {
             <Row xs={1} md={3} className="g-4">
 
                 {
-                    services.map(service => <Service
+                    fakeData.map(service => <Service
                         key={service.id}
                         service={service}
                     ></Service>)

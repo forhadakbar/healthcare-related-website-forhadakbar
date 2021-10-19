@@ -16,7 +16,8 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
-                            <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
+                            <Nav.Link as={Link} to="/plans">Plans</Nav.Link>
+                            <Nav.Link as={Link} to="/profile">View Profile</Nav.Link>
                         </Nav>
 
 
@@ -24,9 +25,9 @@ const Header = () => {
                             user.email ?
 
                                 <Nav>
-                                    <button onClick={logOut}>Sign Out</button>
+                                    <button onClick={logOut} className="btn btn-secondary">Sign Out</button>
                                     <Nav.Link eventKey={2} href="#memes">
-                                        Sign in as: {user.displayName}
+                                        Sign in as: {user.email}
                                     </Nav.Link>
                                 </Nav>
 

@@ -5,15 +5,23 @@
         "description": "Plans that offer coverage from birth to adulthood for everyone. We have plans that fits your need.",
         "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807_/image_copy.coreimg.1280.svg/1626724410117/icon-stethoscope.svg",
         "detail": "Choosing effective, sustainable health insurance coverage for your business helps build a solid foundation for balancing costs and prioritizing care for your employees. With UnitedHealthcare, you'll find a wide range of group health insurance plans for large and small businesses, with a focus on offering a better experience for employers and employees alike.",
-        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container/image.coreimg.82.1280.jpeg/1618512892392/health-insurance-medicare-couple-taking-selfie-outdoors-522x260.jpeg"
+        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container/image.coreimg.82.1280.jpeg/1618512892392/health-insurance-medicare-couple-taking-selfie-outdoors-522x260.jpeg",
+        "cost": "388",
+        "plan": "Platinum EPO $7200",
+        "plan_details": "Covers 90% on average of your medical costs; you pay 10%",
+        "doc_visit": "90"
     },
     {
         "id": "2",
         "title": "Medicare",
         "description": "Plans for people 65 or older or those who may qualify because of a disability or special condition.",
-        "icon": "https://www.uhc.com/_jcr_content/root/regioncontainer-main/responsivegrid-bottom/container/container_1757183781/container_752075807__2034042106/image_copy.coreicon.1280.svg/1613218532934/medicare-c-bed-stethoscope-2-color.svg",
+        "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807__1396169814/image_copy.coreimg.1280.svg/1615230982938/glasses-2-color.svg",
         "detail": "We offers Medicare coverage for medical, prescription drugs, and other benefits like dental — and we offer the only Medicare plans with the AARP name. Here are the different types of medicare plans you can choose from — and what they cover.",
-        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_273411613/image_copy.coreimg.82.1280.jpeg/1618512910277/health-insurance-medicaid-lady-with-child-on-shoulders-522x260.jpeg"
+        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_273411613/image_copy.coreimg.82.1280.jpeg/1618512910277/health-insurance-medicaid-lady-with-child-on-shoulders-522x260.jpeg",
+        "cost": "310",
+        "plan": "Gold HMO $7900",
+        "plan_details": "Covers 80% on average of your medical costs; you pay 20%",
+        "doc_visit": "75"
     },
     {
         "id": "3",
@@ -21,7 +29,11 @@
         "description": "Plans that offer savings for employers, while supporting employee health for small business.",
         "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807__719673733/image_copy.coreimg.1280.svg/1632770998906/add-benefits-2-color.svg",
         "detail": "For a small business, health insurance is a critical factor in retaining and recruiting employees, as well as maintaining productivity and employee satisfaction. UnitedHealthcare offers a wide range of group health insurance options designed to help your small business save money and support your employees’ health and wellbeing.",
-        "img": "https://www.uhc.com/dental-vision-supplemental-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_220903678/image_copy.coreimg.82.1280.jpeg/1619643411604/dental-vision-supplemental-employer-520x260.jpeg"
+        "img": "https://www.uhc.com/dental-vision-supplemental-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_220903678/image_copy.coreimg.82.1280.jpeg/1619643411604/dental-vision-supplemental-employer-520x260.jpeg",
+        "cost": "350",
+        "plan": "Silver PPO $7500",
+        "plan_details": "Covers 70% on average of your medical costs; you pay 30%",
+        "doc_visit": "70"
     },
     {
         "id": "4",
@@ -29,7 +41,11 @@
         "description": "Temporary health plans that fit almost any lifestyle or budget.",
         "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807__915249554/image_copy.coreimg.1280.svg/1615230579287/time-clock-2-color.svg",
         "detail": "Short term health insurance, underwritten by Golden Rule Insurance Company, is a flexible health insurance coverage solution when you need coverage for a period of transition in your life.",
-        "img": "https://www.uhc.com/_jcr_content/root/regioncontainer-main/responsivegrid-bottom/container_370364568__2011260795/grid_copy/container_1055174479/container_copy_copy_/image.coreimg.82.1280.jpeg/1634222840903/senior-choosing-plan-computer-754x392.jpeg"
+        "img": "https://www.uhc.com/_jcr_content/root/regioncontainer-main/responsivegrid-bottom/container_370364568__2011260795/grid_copy/container_1055174479/container_copy_copy_/image.coreimg.82.1280.jpeg/1634222840903/senior-choosing-plan-computer-754x392.jpeg",
+        "cost": "400",
+        "plan": "Bronze EPO $5500",
+        "plan_details": "Covers 60% on average of your medical costs; you pay 40%",
+        "doc_visit": "60"
     },
     {
         "id": "5",
@@ -37,7 +53,11 @@
         "description": "Plans that are low cost or no-cost or Dual Special Needs Plans (D-SNP).",
         "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807__2131799873/image_copy.coreimg.1280.svg/1615230844162/umbrella-2-color.svg",
         "detail": "Medicaid is health insurance that’s available if you have a low income. Other people sometimes qualify for Medicaid, like: Pregnant women, Children, Older people, People with a disability. Medicaid plans can be offered at a lower cost or sometimes at no cost to you. Medicaid is different in each state. It may be called different names depending on where you live.",
-        "img": "https://www.uhc.com/medicaid/dsnp/_jcr_content/root/regioncontainer-main/responsivegrid/containerfloatingcon/image.coreimg.82.1280.jpeg/1613218591556/dsnp-woman-wheelchair-474x312.jpeg"
+        "img": "https://www.uhc.com/medicaid/dsnp/_jcr_content/root/regioncontainer-main/responsivegrid/containerfloatingcon/image.coreimg.82.1280.jpeg/1613218591556/dsnp-woman-wheelchair-474x312.jpeg",
+        "cost": "250",
+        "plan": "SNP HMO $6200",
+        "plan_details": "Covers 100% on average of your medical costs; you pay 1000%, Special eligibility required",
+        "doc_visit": "0"
     },
     {
         "id": "6",
@@ -45,6 +65,10 @@
         "description": "Coverage to add on to health insurance plans.",
         "icon": "https://www.uhc.com/content/experience-fragments/uhcdotcom/experiences/home/uhone/uhone-shop-area-stripe-master/uhone-shopping-stripe-with-plan-finder-2/_jcr_content/root/container_1757183781/container_1757183781/grid/container_752075807__1558564283/image_copy.coreimg.1280.svg/1615230818727/toothbrush-2-color.svg",
         "detail": "Explore our supplemental plans, like dental or vision insurance, that can help you plan ahead for life's unexpected events. If you're looking for individual or family coverage for care like medical visits, preventive care and more, view health insurance plans for you and your family.",
-        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_220903678/image_copy.coreimg.82.1280.jpeg/1618512989932/health-insurance-family-brushing-teeth-522x260.jpeg"
+        "img": "https://www.uhc.com/health-insurance-plans/_jcr_content/root/regioncontainer-main/responsivegrid/container_copy/grid_copy/container_220903678/image_copy.coreimg.82.1280.jpeg/1618512989932/health-insurance-family-brushing-teeth-522x260.jpeg",
+        "cost": "150",
+        "plan": "Optional HMO $4500",
+        "plan_details": "Covers when additional cost like dental or vision",
+        "doc_visit": "45"
     }
 ]

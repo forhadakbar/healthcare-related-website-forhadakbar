@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useAPI } from '../../../Context/apiContext';
 
 const Service = (props) => {
 
