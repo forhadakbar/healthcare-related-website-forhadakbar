@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { useAPI } from '../../Context/apiContext';
 
@@ -7,11 +6,9 @@ const SeeDetails = () => {
 
     const { serviceId } = useParams();
     const { services } = useAPI();
-    const { isLoading } = useAPI();
+    const { isLoadingData } = useAPI();
 
     const filterData = services.filter(service => service.id === serviceId)
-
-    console.log(filterData);
 
 
     return (
@@ -19,7 +16,7 @@ const SeeDetails = () => {
 
             {
 
-                !isLoading ?
+                !isLoadingData ?
 
 
                     <div className="d-flex justify-content-center mt-5">

@@ -34,7 +34,6 @@ const Header = () => {
 
                                 <Nav>
                                     <Nav.Link as={Link} to="/login">Sign In</Nav.Link>
-
                                 </Nav>
 
                         }

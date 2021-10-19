@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import APIContextProvider from './Context/apiContext';
 import Home from './Pages/Home/Home/Home';
-import Login from './Pages/Login/Login';
+import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import Pricing from './Pages/Pricing/Pricing';
 import SeeDetails from './Pages/SeeDetails/SeeDetails';
@@ -28,9 +29,10 @@ function App() {
               <Pricing></Pricing>
             </Route>
 
-            <Route path="/services/:serviceId">
+            {/* Private Route */}
+            <PrivateRoute path="/services/:serviceId">
               <SeeDetails></SeeDetails>
-            </Route>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
